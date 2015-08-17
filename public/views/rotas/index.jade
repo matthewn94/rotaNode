@@ -1,0 +1,21 @@
+extends layout
+
+block content
+   section#one.main.special
+      .container
+         span.image.fit.primary
+            img(src='images/pic01.jpg', alt='')
+         .content
+            header.major
+               h2 Rotas
+               ul.icons-grid
+                  each item in returnRotas
+                     li
+                        span.icon.major
+                        h3 #{item.empName}
+                        p #{item.empNum}
+                        p #{item.week}
+                        p #{item.shifts}
+               a.button.special.scrolly(href='/') Home
+
+
