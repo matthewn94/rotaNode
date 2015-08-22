@@ -30,21 +30,20 @@ block content
                 .content
                     header.major
                         h2 How we can help
-                    p
-                        | Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet vulputate.
+                    p=homePageData[0].sectionTwo
                     ul.icons-grid
                         li
-                            span.icon.major.fa-camera-retro
-                            h3 Magna Etiam
+                            span.icon.major.fa-check-square
+                            h3 Improve margins
                         li
-                            span.icon.major.fa-pencil
-                            h3 Lorem Ipsum
+                            span.icon.major.fa-mobile
+                            h3 Multiple devices
                         li
-                            span.icon.major.fa-code
-                            h3 Nulla Tempus
+                            span.icon.major.fa-heart-o
+                            h3 Support
                         li
-                            span.icon.major.fa-coffee
-                            h3 Sed Feugiat
+                            span.icon.major.fa-wrench
+                            h3 Continuously evolving
                 a.goto-next.scrolly(href='#three') Next
         // Three
         section#three.main.special
@@ -54,8 +53,8 @@ block content
                 .content
                     header.major
                         h2 One more thing
-                    p
-                        | Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum.
+                    p=homePageData[0].sectionThree
+
                     a.button.special.scrolly(href='/rotas') Have a look..
                 a.goto-next.scrolly(href='#footer') Next
         // Footer
@@ -63,18 +62,30 @@ block content
             .container
                 header.major
                     h2 Get in touch
+                        form(method='post', action='/contactconfirmation')
+                            .row.uniform
+                                div(class='6u 12u$(xsmall)')
+                                    input#name(type='text', name='name', placeholder='Name')
+                                div(class='6u$ 12u$(xsmall)')
+                                    input#email(type='email', name='email', placeholder='Email')
+                                div(class='12u$')
+                                    textarea#message(name='message', placeholder='Message', rows='4')
+                                div(class='12u$')
+                                ul.actions
+                                    li
+                                        input.special(type='submit', value='Send Message')
 
 
             footer
                 ul.icons
                     li
-                        a.icon.alt.fa-twitter(href='#')
+                        a.icon.alt.fa-twitter(href='https://twitter.com/matthewneill1?lang=en-gb')
                             span.label Twitter
                     li
-                        a.icon.alt.fa-facebook(href='#')
+                        a.icon.alt.fa-facebook(href='https://www.facebook.com/matt.neill.161')
                             span.label Facebook
                     li
-                        a.icon.alt.fa-instagram(href='#')
+                        a.icon.alt.fa-instagram(href='https://instagram.com/matthewneill94/')
                             span.label Instagram
                     li
                         a.icon.alt.fa-envelope(href='#')

@@ -1,4 +1,6 @@
-var express = require('express');
+var express = require('express'),
+    nodemailer = require('nodemailer');
+
 
 var routes  = function(homePageData) {
     var homePageRouter = express.Router();
@@ -6,6 +8,9 @@ var routes  = function(homePageData) {
 
     homePageRouter.route('/')
         .get(homePageController.get);
+
+    homePageRouter.route('/contactconfirmation')
+        .post(homePageController.getContactConfirmation);
 
     return homePageRouter;
 };
